@@ -192,7 +192,9 @@ Error:
 * Detect PowerShell-based threats
 * Implement privilege escalation scenarios
 * Build dashboards and alerts
+## 📸 Screenshots
 
+![Brute Force Detection](../screenshots/brute-force/event_code_4625.png)
 ---
 
 ## 💼 Skills Demonstrated
