@@ -94,3 +94,41 @@ The lab simulates endpoint activity and demonstrates how security analysts detec
 * Threat detection
 * Windows security monitoring
 * SOC fundamentals
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+# 🚨 Brute Force Detection Lab (Windows Security Logs)
+
+## 📌 Overview
+After completing my CompTIA Security+ certification, I built this lab to simulate and detect brute force attacks using Splunk.
+
+---
+
+## 🧪 Simulation
+- Locked system using Windows + L  
+- Entered incorrect password multiple times  
+- Generated EventCode 4625 (failed logins)
+
+---
+
+## 🔍 Detection Query
+```spl
+index=main EventCode=4625
+| stats count by Account_Name, Source_Network_Address
+| where count > 5
+
+⚠️ Challenges Faced
+No logs appearing in Splunk
+Forwarder was not collecting logs
+Fix
+Switched to direct log ingestion using Splunk Add Data
+Splunk service errors
+Service not responding (NET HELPMSG 2186)
+Access denied issues
+Fix
+Restarted services manually
+Ran commands as Administrator
+🧠 Key Learning
+Brute force detection using EventCode 4625
+Troubleshooting log ingestion issues
+Building detection queries in Splunk
