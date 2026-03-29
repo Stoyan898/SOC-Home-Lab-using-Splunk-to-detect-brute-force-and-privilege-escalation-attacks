@@ -129,3 +129,10 @@ screenshot alert created
 * ## 📸 Screenshots
 
 ![Privilege Escalation](../screenshots/privilege-escalation/event4732.png)
+
+## 🔑 Key Event Explained
+
+**EventCode 4732 – User Added to Local Group**
+- Triggered when a user is added to a group (e.g. Administrators)
+- Indicates potential privilege escalation
+- Important for detecting unauthorized admin access
