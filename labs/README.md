@@ -1,104 +1,38 @@
-# 🛡️ SOC Home Lab – Splunk & Sysmon
+# 🛡️ SOC Home Lab – Splunk Detection Projects
 
 ## 📌 Overview
+After completing my CompTIA Security+ certification with no prior hands-on SOC experience, I built this home lab to gain practical skills in security monitoring and threat detection.
 
-This project demonstrates a home Security Operations Center (SOC) lab built using VirtualBox, Windows, Linux, Sysmon, and Splunk.
-
-The lab simulates endpoint activity and demonstrates how security analysts detect suspicious behavior using log analysis.
+This repository contains hands-on labs using Splunk to simulate and detect real-world attack scenarios.
 
 ---
 
 ## 🧰 Tools & Technologies
-
-* VirtualBox
-* Windows 10 VM
-* Linux VM
-* Sysmon (endpoint logging)
-* Splunk (SIEM)
-* Splunk Universal Forwarder
+- Splunk Enterprise (SIEM)
+- Windows VM
+- Sysmon
+- VirtualBox
 
 ---
 
-## 🏗️ Lab Architecture
+## 📂 Project Structure
 
-* Windows VM → generates logs (Sysmon)
-* Splunk Forwarder → sends logs
-* Splunk Server → collects and analyzes logs
-
----
-
-## 🔧 Configuration Steps
-
-### 1. Installed Sysmon
-
-* Configured Sysmon with a custom XML configuration
-* Enabled logging for:
-
-  * Process creation
-  * Network connections
-  * File activity
-
-### 2. Installed Splunk Universal Forwarder
-
-* Configured to send logs to Splunk server on port 9997
-
-### 3. Enabled Log Ingestion
-
-* Added Sysmon logs to Splunk using inputs.conf
+- [🚨 Brute Force Detection Lab](labs/brute-force-lab.md)
+- [🚨 Privilege Escalation Lab](labs/privilege-escalation-lab.md)
 
 ---
 
-## 🧪 Testing & Validation
-
-### Simulated Activity:
-
-* Executed notepad.exe on Windows endpoint
-
-### Detection in Splunk:
-
-* Queried logs using:
-
-  ```
-  index=main notepad.exe
-  ```
-
-### Observed:
-
-* EventCode 1 (Process Creation)
-* Full process path and user context
+## 🧠 Skills Demonstrated
+- SIEM log analysis (Splunk)
+- Threat detection & investigation
+- Windows Security Event analysis
+- Troubleshooting log ingestion issues
+- SOC fundamentals
 
 ---
 
-## 🔍 Key Learnings
-
-* How to collect endpoint telemetry using Sysmon
-* How to forward logs to a SIEM
-* How to search and analyze logs in Splunk
-* Understanding process execution monitoring
-
----
-
-## 🚀 Future Improvements
-
-* Simulate phishing behavior (PowerShell downloads)
-* Detect brute force attacks
-* Build Splunk dashboards and alerts
-* Create incident response playbooks
-
----
-
-## 💼 Skills Demonstrated
-
-* SIEM (Splunk)
-* Log analysis
-* Threat detection
-* Windows security monitoring
-* SOC fundamentals
-
--------------------------------------------------------------------------------------------------------------------------------------
-
-
-## 🔗 Additional Labs
-
-- [Brute Force Detection Lab](brute-force-lab.md)
+## 🚀 Future Work
+- Phishing attack simulation
+- PowerShell threat detection
+- Dashboard & alert creation
 - [Privilege Escalation Lab](privilege-escalation-lab.md)
