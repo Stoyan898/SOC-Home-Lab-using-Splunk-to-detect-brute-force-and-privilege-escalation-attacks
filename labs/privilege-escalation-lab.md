@@ -57,6 +57,13 @@ screenshot event4732
 index=main EventCode=4732
 | search Group_Name="Administrators"
 ```
+## 🧠 Detection Logic
+
+This query identifies when a user is added to the Administrators group.
+
+Adding a user to this group grants elevated privileges, which may indicate privilege escalation.
+
+Monitoring these events helps detect unauthorized access and potential security breaches.
 
 screenshot event search 4732
 
