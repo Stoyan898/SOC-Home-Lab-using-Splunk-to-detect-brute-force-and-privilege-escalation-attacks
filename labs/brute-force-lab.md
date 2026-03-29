@@ -211,6 +211,16 @@ Error:
 * Threat detection
 * Troubleshooting
 * SOC fundamentals
+* ## 🛡️ SOC Analyst Response
+
+If this activity was detected in a real environment, I would:
+
+- Investigate the source IP address generating failed logins
+- Check if multiple accounts are being targeted
+- Identify the time pattern of login attempts (burst or spread out)
+- Determine if the activity is internal or external
+- Verify if the user account is legitimate or compromised
+- Escalate the incident if suspicious behavior is confirmed
 
 * ## 🔑 Key Event Explained
 
