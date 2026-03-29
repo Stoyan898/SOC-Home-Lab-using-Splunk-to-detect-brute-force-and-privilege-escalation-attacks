@@ -74,6 +74,13 @@ screenshot event_code_4625
 index=main EventCode=4625
 | stats count by Account_Name, Source_Network_Address
 | where count > 5
+## 🧠 Detection Logic
+
+This query detects multiple failed login attempts for the same user or source IP address.
+
+By counting the number of failed logins and filtering for more than 5 attempts, it helps identify potential brute force attacks.
+
+Repeated failures in a short period of time are a strong indicator of password guessing activity.
 ```
 screenshot stats_count
 ---
